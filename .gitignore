@@ -1,0 +1,34 @@
+# Node / npm
+node_modules/
+package-lock.json
+
+# VSCode
+.vscode/
+
+# OS / system files
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+*.TMP
+*.log
+AppData/
+NTUSER.DAT
+
+# OneDrive
+OneDrive*/
+*.url
+
+# User-specific files
+*.DS_Store
+*.swp
+*.sublime-workspace
+
+# Fonts / large binaries
+*.ttf
+*.otf
+*.eot
+*.woff
+*.woff2
+touch .gitignore
+# ან შექმენი ვორდით/VS Code-ში
