@@ -127,7 +127,16 @@ Temporal Dead Zone – ვერ გამოძახებ, სანამ �
 // console.log("b is " + b);//3
 
 
+// let a = "3";
+// let b = "8";
 
+// // ცვლადების გამოცვლა ცვლადის დახმარებით
+// let temp = a;
+// a = b;
+// b = temp;
+
+// console.log("a is " + a); // 8
+// console.log("b is " + b); // 3
 
 
 // ====================================================
@@ -201,10 +210,18 @@ Temporal Dead Zone – ვერ გამოძახებ, სანამ �
 
 
 
+
+
+
+
+
+
+
+
 // დარჩა ეს
 
 
-
+// გადავხედოთ
 
 /* მინიჭების ოპერატორები */
 // let x = 5;
@@ -217,6 +234,19 @@ Temporal Dead Zone – ვერ გამოძახებ, სანამ �
 // x %= 5;
 // console.log(x);
 
+
+
+// let x = 5;
+
+// x += 3;   // x = x + 3 → x = 8
+// x -= 2;   // x = x - 2 → x = 6
+// x *= 4;   // x = x * 4 → x = 24
+// x /= 2;   // x = x / 2 → x = 12
+// x %= 5;   // x = x % 5 → x = 2 (ნაშთი 5-ზე გაყოფისას)
+
+// console.log(x); // 2
+
+
 /* შედარების ოპერატორები */
 // console.log(5 == "5");
 // console.log(5 === "5");
@@ -225,19 +255,51 @@ Temporal Dead Zone – ვერ გამოძახებ, სანამ �
 // console.log(5 > 3);
 // console.log(5 < 3);
 
+
+// გადავხედოთ
+
+
+
+
+
+// console.log(5 == "5");   // true (ღირებულება ემთხვევა, მაგრამ ტიპი არა)
+// console.log(5 === "5");  // false (ღირებულება ემთხვევა, ტიპი არა)
+// console.log(5 != 3);     // true (5 არ უდრის 3-ს)
+// console.log(5 !== "5");  // true (ღირებულება ემთხვევა, ტიპი განსხვავდება)
+// console.log(5 > 3);      // true
+// console.log(5 < 3);      // false
+
+
 /* ლოგიკური ოპერატორები */
 // console.log(true && false);
 // console.log(true || false);
 // console.log(!true);
- /*
-====================================================
-საუკეთესო პრაქტიკა
-====================================================
-- გამოიყენეთ ===, !== – თავიდან აგაცილებთ გაუგებარ შედეგებს
-- მინიჭების ოპერატორები გამოიყენეთ გასაგებად
-- ლოგიკური ოპერატორები უნდა იყვნენ მკაფიოები
-- არითმეტიკული ოპერატორები – მხოლოდ საჭიროების შემთხვევაში, მაგრამ გასაგებად
-*/
+ 
+
+
+
+// //  გადავხედოთ
+
+
+// console.log(true && false); // false → ორივე უნდა იყოს true
+// console.log(true || false); // true → ერთი მაინც უნდა იყოს true
+// console.log(!true);         // false → პირობის საწინააღმდეგო
+
+
+
+// && → AND (და)
+
+// || → OR (ან)
+
+// ! → NOT (არა)
+// // ====================================================
+// საუკეთესო პრაქტიკა
+// ====================================================
+// - გამოიყენეთ ===, !== – თავიდან აგაცილებთ გაუგებარ შედეგებს
+// - მინიჭების ოპერატორები გამოიყენეთ გასაგებად
+// - ლოგიკური ოპერატორები უნდა იყვნენ მკაფიოები
+// - არითმეტიკული ოპერატორები – მხოლოდ საჭიროების შემთხვევაში, მაგრამ გასაგებად
+
 // <!-- script.js
 // ნაჩვენებია script.js -
 
@@ -307,6 +369,15 @@ Temporal Dead Zone – ვერ გამოძახებ, სანამ �
 
 //////////////////////////////////////////////////////////////////////////////////////
 // 4. OR (||) — მინიმუმ ერთი პირობა
+
+
+
+// არის
+
+
+
+
+// const day = "Saturday";
 // const temperature = 35;
 
 // if (day === "Saturday" || day === "Sunday") {
@@ -314,6 +385,7 @@ Temporal Dead Zone – ვერ გამოძახებ, სანამ �
 // } else {
 //   console.log("Do some work.");
 // }
+
 //
 ///////////////
 // NOT (!) — პირობის საწინააღმდეგო
@@ -344,6 +416,18 @@ Temporal Dead Zone – ვერ გამოძახებ, სანამ �
 
 // წინააღმდეგ შემთხვევაში, კონსოლში გამოიტანოს: 'We can eat later!'.
 
+
+
+// არის
+
+// let hungerLevel = 7;
+
+// if (hungerLevel > 7) {
+//   console.log('Time to eat!');
+// } else {
+//   console.log('We can eat later!');
+// }
+
 /////////////////
 
 // გვაქვს ორი ცვლადი — mood და tirednessLevel.
@@ -354,11 +438,43 @@ Temporal Dead Zone – ვერ გამოძახებ, სანამ �
 
 // თუ ორივე პირობა არის true, კონსოლში გამოვიტანთ სტრინგს 'time to sleep'.
 
+
+
+
+// არის
+
+
+// let mood = "sleepy";
+// let tirednessLevel = 6;
+
+// if (mood === "sleepy" && tirednessLevel > 8) {
+//   console.log("time to sleep");
+// } else {
+//   console.log("not bedtime yet");
+// }
+
 // წინააღმდეგ შემთხვევაში, გამოვიტანთ 'not bedtime yet'.
 //
 //
 
 // რა მოხდება თუ && ოპერატორს შევცვლით ||, ხოლო === – ! ით?
+
+
+
+
+// არის
+
+// let mood = "sleepy";
+// let tirednessLevel = 6;
+// if (mood !== "sleepy" || tirednessLevel > 8) {
+//   console.log("time to sleep");
+// } else {
+//   console.log("not bedtime yet");
+// }
+
+
+
+
 ////////////////////
 
 // Truthy და Falsy
@@ -399,11 +515,22 @@ Temporal Dead Zone – ვერ გამოძახებ, სანამ �
 //    console.log('No apples left!');
 // }
 
-// // Prints 'No apples left!'
+
+// 0 არის falsy → else ბლოკი შესრულდება.
+
+// 
+// Prints 'No apples left!'
+
+
+
 
 // ამ შემთხვევაში პირობა აფასებს false, რადგან numberOfApples არის 0, რომელიც falsy მნიშვნელობაა, ამიტომ else ბლოკი შესრულდება.
 
 //////////////////////////////
+
+
+
+
 
 // სავარჯიშო
 // შეცვალეთ wordCount-ის მნიშვნელობა ისე, რომ ის truthy იყოს. ეს მნიშვნელობა კვლავ უნდა იყოს ნუმერული.
@@ -411,6 +538,10 @@ Temporal Dead Zone – ვერ გამოძახებ, სანამ �
 // კონსოლში უნდა გამოისახოს: "Great! You've started your work!"
 /////////
 //
+
+
+
+
 // let wordCount = 0;
 
 // if (wordCount) {
@@ -419,9 +550,21 @@ Temporal Dead Zone – ვერ გამოძახებ, სანამ �
 //   console.log("Better get to work!");
 // }
 
+
+
+
 // შეცვალეთ favoritePhrase-ის მნიშვნელობა ისე, რომ ის კვლავ იყოს სტრინგი, მაგრამ falsy.
 
 //  კონსოლში უნდა გამოისახოს: "This string is definitely empty."
+
+
+
+
+
+
+
+
+
 // let favoritePhrase = "Hello World!";
 
 // if (favoritePhrase) {
@@ -430,6 +573,10 @@ Temporal Dead Zone – ვერ გამოძახებ, სანამ �
 //   console.log("This string is definitely empty.");
 // }
 
+
+
+
+
 /////////////////////////
 
 // Truthy და Falsy დავალება
@@ -437,7 +584,10 @@ Temporal Dead Zone – ვერ გამოძახებ, სანამ �
 
 // მაგალითად, თუ გვაქვს ვებგვერდი და გვსურს მომხმარებლის სახელის გამოყენება პერსონალიზებული მისალმებისთვის, ზოგჯერ მომხმარებელს ანგარიში არ აქვს და სახელის ცვლადი falsy იქნება.
 
-// let username = '';
+
+
+
+// let username = "";
 // let defaultName;
 
 // if (username) {
@@ -471,20 +621,38 @@ Temporal Dead Zone – ვერ გამოძახებ, სანამ �
 // შემდეგ დავბეჭდოთ, რა ფილმის ბილეთი შეიძინა მომხმარებელმა.
 // შემდეგ მომხმარებელი გადაწყვეტს ფილმის შეცვლას და ირჩევს "Inception"-ს.
 
-// //
+
+
+
+// არის
+
+
 // let chosenMovie = "";
-//
-//
-//
+
+// // თუ მომხმარებელი არაფერს არ ირჩევს, ჩავანაცვლოთ "Default Movie"
+// let finalMovie = chosenMovie || "Default Movie";
+
 // console.log(`Ticket booked for: ${finalMovie}.`);
+
+// // მომხმარებელი შეცვლის ფილმს
+// chosenMovie = "Inception";
+// finalMovie = chosenMovie || "Default Movie";
+
+// console.log(`Ticket booked for: ${finalMovie}.`);
+
 //////////////////////////////////////////////////////
+
+
+
+
+
 
 //ტერნარი ოპერატორი if...else –ის  შემოკლებული ვარიანტი/
 //
 // condition ? valueIfTrue : valueIfFalse
-//
 
-//სტანდარტული მაგალითი
+
+// სტანდარტული მაგალითი
 // let isNightTime = true;
 
 // if (isNightTime) {
@@ -493,15 +661,23 @@ Temporal Dead Zone – ვერ გამოძახებ, სანამ �
 //   console.log("Turn off the lights!");
 // }
 
+
+
+
 //
 //
 // შემოკლებული ვარიანტი
 // isNightTime
 //   ? console.log("Turn on the lights!")
 //   : console.log("Turn off the lights!");
+
+
+
 //////////////////////
 // სავარჯიშო; შეცვალე ეს ჩანაწერი მოკლე ჩანაწერით
 ///
+
+
 // let isLocked = false;
 
 // if (isLocked) {
@@ -525,6 +701,28 @@ Temporal Dead Zone – ვერ გამოძახებ, სანამ �
 // } else {
 //   console.log("I don't love that!");
 // }
+
+
+
+// მოკლე ჩანაწერი, ოპერატორების გადაკეთება, condition ? valueIfTrue : valueIfFalse;
+
+// let isLocked = false;
+// isLocked
+//   ? console.log("You will need a key to open the door.")
+//   : console.log("You will not need a key to open the door.");
+
+// let isCorrect = true;
+// isCorrect
+//   ? console.log("Correct!")
+//   : console.log("Incorrect!");
+
+// let favoritePhrase = "Love That!";
+// favoritePhrase === "Love That!"
+//   ? console.log("I love that!")
+//   : console.log("I don't love that!");
+
+
+
 /////////////////////////
 // საუკეთესო პრაქტიკა (DO / AVOID)
 
@@ -539,7 +737,34 @@ Temporal Dead Zone – ვერ გამოძახებ, სანამ �
 /////////////////////////////////
 //
 // Else If Statements
-//
+
+// let stopLight = "black";
+
+// if (stopLight === "red") {
+//   console.log("Stop!");
+// } else if (stopLight === "yellow") {
+//   console.log("Slow down.");
+// } else if (stopLight === "green") {
+//   console.log("Go!");
+// } else {
+//   console.log("Caution, unknown!");
+// }
+
+
+// let stopLight = "green";
+
+// if (stopLight === "red") {
+//   console.log("Stop!");
+// } else if (stopLight === "yellow") {
+//   console.log("Slow down.");
+// } else if (stopLight === "green") {
+//   console.log("Go!");
+// } else {
+//   console.log("Caution, unknown!");
+// }
+
+
+
 // let stopLight = "yellow";
 
 // if (stopLight === "red") {
@@ -552,6 +777,22 @@ Temporal Dead Zone – ვერ გამოძახებ, სანამ �
 //   console.log("Caution, unknown!");
 // }
 
+// let stopLight = "red";
+
+// if (stopLight === "red") {
+//   console.log("Stop!");
+// } else if (stopLight === "yellow") {
+//   console.log("Slow down.");
+// } else if (stopLight === "green") {
+//   console.log("Go!");
+// } else {
+//   console.log("Caution, unknown!");
+// }
+
+
+
+
+
 // სავარჯიშო
 /// დაამატე else if პირობა, რომელიც ამოწმებს: season === "winter";
 // და თუ პირობა შესრულდა გამოიტანე console.log("It's winter! Everything is covered in snow.");
@@ -562,6 +803,61 @@ Temporal Dead Zone – ვერ გამოძახებ, სანამ �
 
 // if (season === "spring") {
 //   console.log("It's spring! The trees are budding!");
+// } else {
+//   console.log("Invalid season.");
+// }
+
+
+
+
+
+// არის 
+
+
+
+
+
+
+// let season = "summer";
+
+// if (season === "spring") {
+//   console.log("It's spring! The trees are budding!");
+// } else if (season === "summer") {
+//   console.log("It's sunny and warm because it's summer!");
+// } else if (season === "fall") {
+//   console.log("It's fall! Leaves are falling!");
+// } else if (season === "winter") {
+//   console.log("It's winter! Everything is covered in snow.");
+// } else {
+//   console.log("Invalid season.");
+// }
+
+
+// let season = "fall";
+
+// if (season === "spring") {
+//   console.log("It's spring! The trees are budding!");
+// } else if (season === "summer") {
+//   console.log("It's sunny and warm because it's summer!");
+// } else if (season === "fall") {
+//   console.log("It's fall! Leaves are falling!");
+// } else if (season === "winter") {
+//   console.log("It's winter! Everything is covered in snow.");
+// } else {
+//   console.log("Invalid season.");
+// }
+
+
+// let season = "sun";
+
+// if (season === "spring") {
+//   console.log("It's spring! The trees are budding!");
+// } else if (season === "summer") {
+//   console.log("It's sunny and warm because it's summer!");
+// } else if (season === "fall") {
+//   console.log("It's fall! Leaves are falling!");
+// } else if (season === "winter") {
+//   console.log("It's winter! Everything is covered in snow.");
 // } else {
 //   console.log("Invalid season.");
 // }
@@ -583,6 +879,31 @@ Temporal Dead Zone – ვერ გამოძახებ, სანამ �
 // } else {
 //   console.log("Invalid item");
 // }
+
+
+
+// let groceryItem = "tomato";
+
+// if (groceryItem === "tomato") {
+//   console.log("Tomatoes are $0.49");
+// } else if (groceryItem === "papaya") {
+//   console.log("Papayas are $1.29");
+// } else {
+//   console.log("Invalid item");
+// }
+
+
+
+
+// let groceryItem = "";
+
+// if (groceryItem === "tomato") {
+//   console.log("Tomatoes are $0.49");
+// } else if (groceryItem === "papaya") {
+//   console.log("Papayas are $1.29");
+// } else {
+//   console.log("Invalid item");
+// }
 //
 //
 //
@@ -594,20 +915,77 @@ Temporal Dead Zone – ვერ გამოძახებ, სანამ �
 // switch (groceryItem) {
 //   case 'tomato':
 //     console.log('Tomatoes are $0.49');
-//     break; //თუ break არ დაწერე, შესრულდება ყველა მომდევნო case, სანამ break ან default არ შეგხვდება — ამას fall-through ეწოდება.
+
+// //     break; //თუ break არ დაწერე, შესრულდება ყველა მომდევნო case, სანამ break ან default არ შეგხვდება — ამას fall-through ეწოდება.
+// //   case 'lime':
+//     console.log('Limes are $1.49');
+//     break;
+//   case 'papaya':
+//     console.log('Papayas are $1.29');
+//     break;
+// //   default: //default:// მუშაობს როგორც else.// თუ არცერთი case არ დაემთხვა, მაშინ შესრულდება default-ის კოდი.
+//     console.log('Invalid item');
+//     break;
+// }
+// Prints: Papayas are $1.29
+// //
+
+
+
+
+// არის
+
+
+// let groceryItem = 'papaya';
+
+// switch (groceryItem) {
+//   case 'tomato':
+//     console.log('Tomatoes are $0.49');
+//     break;
 //   case 'lime':
 //     console.log('Limes are $1.49');
 //     break;
 //   case 'papaya':
 //     console.log('Papayas are $1.29');
 //     break;
-//   default: //default:// მუშაობს როგორც else.// თუ არცერთი case არ დაემთხვა, მაშინ შესრულდება default-ის კოდი.
+//   default: // თუ არცერთი case არ დაემთხვა
 //     console.log('Invalid item');
 //     break;
 // }
-// // Prints: Papayas are $1.29
-//
+
+
+
+
+
+// let groceryItem = 'lime';
+
+// switch (groceryItem) {
+//   case 'tomato':
+//     console.log('Tomatoes are $0.49');
+//     break;
+//   case 'lime':
+//     console.log('Limes are $1.49');
+//     break;
+//   case 'papaya':
+//     console.log('Papayas are $1.29');
+//     break;
+//   default: // თუ არცერთი case არ დაემთხვა
+//     console.log('Invalid item');
+//     break;
+// }
+// Prints: Papayas are $1.29
+
 //////////////////////
+
+
+
+
+
+
+
+
+
+
 // savarjiSo
 // შექმენი პროგრამა, რომელიც სპორტსმენს მედალს გადასცემს მისი პოზიციის მიხედვით.
 
@@ -638,6 +1016,88 @@ Temporal Dead Zone – ვერ გამოძახებ, სანამ �
 // თუ ემთხვევა, console.log() უნდა დაბეჭდოს:
 
 // You get the bronze medal!
+
+
+
+// არის 
+
+
+// let athleteFinalPosition = "second place";
+
+// switch (athleteFinalPosition) {
+//   case "first place":
+//     console.log("You get the gold medal!");
+//     break;
+//   case "second place":
+//     console.log("You get the silver medal!");
+//     break;
+//   case "third place":
+//     console.log("You get the bronze medal!");
+//     break;
+//   default:
+//     console.log("No medal awarded.");
+//     break;
+// }
+
+
+
+
+// let athleteFinalPosition = "third place";
+
+// switch (athleteFinalPosition) {
+//   case "first place":
+//     console.log("You get the gold medal!");
+//     break;
+//   case "second place":
+//     console.log("You get the silver medal!");
+//     break;
+//   case "third place":
+//     console.log("You get the bronze medal!");
+//     break;
+//   default:
+//     console.log("No medal awarded.");
+//     break;
+// }
+
+
+
+
+// let athleteFinalPosition = "";
+
+// switch (athleteFinalPosition) {
+//   case "first place":
+//     console.log("You get the gold medal!");
+//     break;
+//   case "second place":
+//     console.log("You get the silver medal!");
+//     break;
+//   case "third place":
+//     console.log("You get the bronze medal!");
+//     break;
+//   default:
+//     console.log("No medal awarded.");
+//     break;
+// }
+
+
+
+
+// let athleteFinalPosition = "first place";
+
+// switch (athleteFinalPosition) {
+//   case "first place":
+//     console.log("You get the gold medal!");
+//     break;
+//   case "second place":
+//     console.log("You get the silver medal!");
+//     break;
+//   case "third place":
+//     console.log("You get the bronze medal!");
+//     break;
+//   default:
+//     console.log("No medal awarded.");
+//     break;
+// }
 
 // 💡 არ დაგავიწყდეს break თითოეული console.log()-ის შემდეგ, რათა შემდეგ case-ები აღარ შესრულდეს.
 // ახლა დაამატე default განყოფილება switch-ის ბოლოს, სადაც გამოიყენებ console.log()-ს ტექსტის დასაბეჭდად:
